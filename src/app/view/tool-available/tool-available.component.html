@@ -1,0 +1,60 @@
+<div class="search-div">
+
+  <mat-form-field class="commbo">
+    <mat-label>Status Type</mat-label>
+    <mat-select matNativeControl required [(ngModel)]="statusType" name="statusType" (ngModelChange)="setStatusType()">
+      <mat-option value="All">All</mat-option>
+      <mat-option value="Available">Available</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="search-txt">
+    <input matInput placeholder="Search" [(ngModel)]="searchTXT" name="searchTXT" (keyup)="searchTransaction()" autocomplete="off">
+  </mat-form-field>
+</div>
+<br>
+<hr>
+<br>
+<div>
+  <div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="tableToolList" style="width: 95%">
+
+      <ng-container matColumnDef="Item_Name">
+        <th mat-header-cell *matHeaderCellDef> Item Name </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.name}} </td>
+        <td mat-footer-cell *matFooterCellDef> Item_Name </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Tool_Code">
+        <th mat-header-cell *matHeaderCellDef> Tool Code </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.toolCode}} </td>
+        <td mat-footer-cell *matFooterCellDef> Tool_Code </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef> Description </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.description}} </td>
+        <td mat-footer-cell *matFooterCellDef> Description </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Part_No">
+        <th mat-header-cell *matHeaderCellDef> Part No </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.partNO}} </td>
+        <td mat-footer-cell *matFooterCellDef> Part No </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.status}} </td>
+        <td mat-footer-cell *matFooterCellDef> Category </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <!--      <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>-->
+    </table>
+  </div>
+</div>
+
+<br>

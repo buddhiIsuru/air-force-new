@@ -1,0 +1,32 @@
+<mat-toolbar id="nav">
+  <mat-toolbar-row>
+    <img src="../assets/Sri_Lanka_Air_Force.png" routerLink="/main/dashboard" routerLinkActive="active">
+    <mat-list class="slafb-top">
+      <mat-list-item>
+        <div class="div0001">
+          <label id="slafb"> Sri Lanka Air Force Base |</label>
+          <label id="slafba">Anuradhapura</label><br>
+        </div>
+      </mat-list-item>
+      <mat-list-item>
+        <span>
+            <label id="slafbtms"> Tool Management System </label>
+        </span>
+      </mat-list-item>
+      <mat-list-item>
+        <span>
+          <div>
+              <button id="slafbtms2"></button>
+              <button mat-raised-button class="logout-btn" (click)="logOut()">
+                  <mat-icon>logout</mat-icon>
+              </button>
+          </div>
+        </span>
+      </mat-list-item>
+    </mat-list>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<br>
+
+<router-outlet></router-outlet>

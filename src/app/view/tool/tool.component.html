@@ -1,0 +1,33 @@
+<div style="width: 500px">
+  <div>
+    <mat-form-field style="width: 100%" >
+      <input matInput placeholder="Tool Code" [(ngModel)]="toolDto.toolCode">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field style="width: 100%" >
+      <input matInput placeholder="Tool Name" [(ngModel)]="toolDto.name">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field style="width: 100%" >
+      <input matInput placeholder="Description" [(ngModel)]="toolDto.description">
+    </mat-form-field>
+    <br>
+
+    <mat-form-field style="width: 100%" >
+      <input matInput placeholder="Part No" [(ngModel)]="toolDto.partNO">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%" >
+      <mat-placeholder class="placeholder">Category</mat-placeholder>
+      <mat-select class="fontSize example-select" [(ngModel)]="toolDto.catid" name="toolId">
+        <mat-option [value] = "category.id" selected="selected" *ngFor="let category of categoryList" name="catName" value="before">{{category.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-button style="width: 40%;height:50px;background: darkorange;color: white;font-size: 20px" (click)="addItem()" > Save </button>
+    <button mat-button style="width: 40%;background: red;height: 50px;margin-left:10px;color: white;font-size: 20px"  > Cancel</button>
+  </div>
+  <br>
+</div>

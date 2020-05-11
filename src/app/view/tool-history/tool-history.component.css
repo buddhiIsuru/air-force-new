@@ -1,0 +1,17 @@
+.search-div{
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 95%;
+  height: 50px;
+}
+
+.re-button{
+  width: 140px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.search-txt{
+  width: 30%;
+  margin-left: 2%;
+}

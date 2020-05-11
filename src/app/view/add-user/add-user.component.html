@@ -1,0 +1,111 @@
+
+<div>
+  <div style="width: 100%;text-align: center">
+    <h1>User</h1>
+  </div>
+  <div>
+    <mat-card style="width: 30%;">
+      <form class="list-viewer-wrapper" #addUserForm='ngForm'>
+        <mat-card-content class="card">
+
+          <div>
+            <div class="form-container">
+              <mat-form-field class="textfieldnew1">
+                <input matInput
+                       [(ngModel)]="user.username"
+                       placeholder="User name" autocomplete="off" name="userName" required />
+              </mat-form-field>
+              <mat-form-field class="textfieldnew1">
+                <input matInput
+                       [(ngModel)]="user.name"
+                       placeholder="Name" name="name" required autocomplete="off" />
+              </mat-form-field>
+              <br>
+              <mat-form-field class="textfieldnew2">
+                <input matInput
+                       [(ngModel)]="user.password"
+                       placeholder="Password"
+                       name="password"
+                       required
+                       autocomplete="off"
+                        [type]="hide ? 'password':'text'" autocomplete="off"/>
+                <mat-icon id="icon" matSuffix (click)="hide = !hide">
+                  {{hide ? 'visibility' : 'visibility_off'}}
+                </mat-icon>
+              </mat-form-field>
+              <mat-form-field class="textfieldnew2">
+                <input matInput
+                       [(ngModel)]="confirmpassword"
+                       name="confirmpassword"
+                       placeholder="Confirm Password"
+                       autocomplete="off"
+                       required
+                       [type]="hide ? 'password':'text'" autocomplete="off"/>
+                        <mat-icon id="icon1" matSuffix (click)="hide = !hide">
+                          {{hide ? 'visibility' : 'visibility_off'}}
+                        </mat-icon>
+              </mat-form-field>
+              <mat-form-field class="textfieldnew2">
+                <input matInput
+                       [(ngModel)]="user.number"
+                       name="telNum"
+                       placeholder="Number"
+                       autocomplete="off"
+                       required/>
+              </mat-form-field>
+
+              <!--<button mat-button type="submit"-->
+              <!--class="mat-raised-button mat-primary"-->
+              <!--[disabled]="!registerForm.valid">Login-->
+              <!--</button>-->
+              <button
+                mat-raised-button
+                class="login-button"
+                routerLinkActive="active" (click)="confirmPassword()" [disabled]="!addUserForm.valid">Add User
+              </button>
+
+            </div>
+          </div>
+        </mat-card-content>
+      </form>
+
+    </mat-card>
+
+    <mat-card class="example-container" style="width: 60%; left: 35%;top: -300px">
+      <mat-form-field style="width: 30%">
+        <input matInput [(ngModel)]="searchTXT" name="searchTXT"  placeholder="Search">
+      </mat-form-field>
+
+      <table mat-table [dataSource]="userList" class="mat-elevation-z8" style="width: 100%">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="userName">
+          <th mat-header-cell *matHeaderCellDef> User Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="number">
+          <th mat-header-cell *matHeaderCellDef> Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="userType">
+          <th mat-header-cell *matHeaderCellDef> User Type </th>
+          <td mat-cell *matCellDef="let element"> {{element.usertype}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card>
+
+  </div>
+
+</div>

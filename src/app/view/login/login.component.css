@@ -1,0 +1,132 @@
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 100vh;
+  background: #002a6d;
+}
+
+.visible-image{
+  width: 10px;
+}
+
+.login-card{
+  max-width: 400px;
+  max-height: 1200px;
+  border-top: 5px solid #e5ca00;
+}
+
+img{
+  width: 50%;
+  height: 50%;
+}
+
+.position-center{
+  text-align: center;
+}
+
+h2, img,.login-card-sub{
+  margin-left: -10px;
+}
+
+
+.login-form{
+  width: 100%;
+  min-width: 150px;
+  max-width: 500px;
+}
+
+.font-size{
+  font-size: 20px;
+}
+
+button{
+  position: absolute;
+  margin: 20px;
+  left: 0;
+  bottom: 0;
+}
+
+.login-button{
+  width: 60%;
+  height:7%;
+  background-color: #e5ca00;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  /*bottom: 0%;*/
+  position: center;
+  /*margin-top: 20px;*/
+  margin-left: 85px;
+  margin-bottom: 50px;
+
+
+}
+
+.add-user{
+  margin-top: 50px;
+  text-underline: darkblue;
+  color: darkblue;
+}
+
+/*#name{*/
+/*width: 80%;*/
+/*position: absolute;*/
+/*height: 20%;*/
+/*}*/
+
+.textfieldnew1{
+  position: center;
+  text-align: center;
+  margin: auto;
+  margin-left: 40px;
+  width: 80%;
+  margin-top: -10px;
+}
+.textfieldnew2{
+  position: center;
+  text-align: center;
+  margin: auto;
+  margin-left: 40px;
+  width: 80%;
+  margin-top: -10px;
+}
+
+#logbutton{
+  position: center;
+  margin-top: 10px;
+  width: 60%;
+  margin-left: 85px;
+
+}
+
+.card{
+  height: 150px;
+}
+
+#icon{
+  position: absolute;
+  right:10%;
+  bottom: 10%;
+  z-index: 10;
+
+}
+/*#heading{*/
+/*position: absolute;*/
+/*left: 10%;*/
+/*}*/
+/*#h3{*/
+/*position: absolute;*/
+/*left: 10%;*/
+/*}*/
+/*#h4{*/
+/*position: absolute;*/
+/*left: 10%;*/
+/*}*/
+/*#h5{*/
+/*position: absolute;*/
+/*left: 10%;*/
+/*}*/

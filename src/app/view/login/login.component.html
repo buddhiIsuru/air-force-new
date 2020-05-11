@@ -1,0 +1,63 @@
+<div class="container">
+
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title class="position-center">
+        <img style="margin-left: 10px" src="../../../assets/Sri_Lanka_Air_Force.png">
+      </mat-card-title>
+
+      <mat-card-subtitle class="login-card-sub position-center">
+        <h1 id="heading" style="margin-left: 10px"> Sri Lankan Air Force Base </h1>
+        <h3 id="h3" style="margin-top: -20px; margin-left: 10px"> Tool Management System </h3>
+        <h4 id="h4" style="margin-top: -15px;margin-left: 10px"> No 06 Helicopter Squadron </h4>
+        <h4 id="h5" style="margin-top: -15px;margin-left: 10px"> Anuradhapura </h4>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <div class="medium-list">
+      <div class="list-viewer-wrapper">
+        <mat-card-content class="card">
+
+          <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && login()" novalidate>
+            <div class="form-container">
+              <mat-form-field class="textfieldnew1">
+                <input id="name"
+                       matInput
+                       formControlName="name"
+                       [(ngModel)]="userName"
+                       placeholder="User name" autocomplete="off" />
+              </mat-form-field>
+              <br>
+              <mat-form-field class="textfieldnew2">
+                <input id="password"
+                       matInput
+                       formControlName="password"
+                       [(ngModel)]="password"
+                       placeholder="Password"
+                       [type]="hide ? 'password':'text'" autocomplete="off"/>
+                <mat-icon id="icon" matSuffix (click)="hide = !hide">
+                  {{hide ? 'visibility' : 'visibility_off'}}
+                </mat-icon>
+              </mat-form-field>
+              <!--<button mat-button type="submit"-->
+              <!--class="mat-raised-button mat-primary"-->
+              <!--[disabled]="!registerForm.valid">Login-->
+              <!--</button>-->
+              <button
+                mat-raised-button
+                class="login-button"
+                routerLinkActive="active"
+                [disabled]="!registerForm.valid">Login
+              </button>
+
+<!--              <p class="add-user" style="width: 100%;text-align: center">-->
+<!--                <a href="" routerLink="/add-user">Add User</a>-->
+<!--              </p>-->
+
+            </div>
+          </form>
+        </mat-card-content>
+      </div>
+    </div>
+  </mat-card>
+</div>
+

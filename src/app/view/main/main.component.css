@@ -1,0 +1,98 @@
+
+
+
+img{
+  width: 10%;
+  margin-top: 6%;
+  margin-left: 20%;
+}
+
+#slafb{
+  font-size: 35px;
+  font-weight: 200;
+  color: darkgoldenrod;
+}
+
+#slafba{
+  font-size: 30px;
+  margin-left: 2%;
+  color: white;
+}
+
+#slafbtms{
+  font-size: 30px;
+  color: white;
+  width: 50%;
+}
+
+#slafbtms2{
+  visibility: hidden;
+  width: 870px;
+}
+
+.slafb-top{
+  margin-top: 8%;
+  margin-left: 5%;
+  width: 50%;
+}
+
+#nav{
+  height: 175px;
+  background-color: #002a6d;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------*/
+
+.nav-content{
+  width: 100%;
+  height: 50px;
+  background: darkblue;
+  text-align: right;
+}
+
+
+.foo{
+  width: 100%;
+  height: 50px;
+  /*margin-top: 50px;*/
+  background: #002a6d;
+  text-align: right;
+}
+
+.content-label{
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content-label1{
+  margin-right: 700px;
+  margin-bottom: -10px;
+}
+
+.content-label2{
+  margin-right: 400px;
+}
+
+.content-label3{
+  margin-right: 100px;
+  margin-bottom: -100px;
+}
+
+.example-icon {
+  padding: 0 14px;
+  margin-right: 20px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.logout-btn{
+  background: transparent;
+  margin-top: 8px;
+  margin-right: 20px;
+  font-weight: bold;
+  color: white;
+}
